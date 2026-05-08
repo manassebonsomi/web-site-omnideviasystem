@@ -1,85 +1,205 @@
+// =========================
 // MENU MOBILE
+// =========================
 
-function toggleMenu() {
-  document
-    .getElementById("nav")
-    .classList.toggle("active");
+function toggleMenu(){
+  document.getElementById("nav")
+  .classList.toggle("active");
 }
 
-
-// SCROLL ANIMATION
-const reveals = document.querySelectorAll(".reveal");
-
-function revealElements() {
-  reveals.forEach((element) => {
-
-    const windowHeight = window.innerHeight;
-    const elementTop = element.getBoundingClientRect().top;
-    const revealPoint = 100;
-
-    if (elementTop < windowHeight - revealPoint) {
-      element.classList.add("active");
-    } else {
-      element.classList.remove("active");
-    }
-  });
-
-}
-
-// EXECUTION
-window.addEventListener("scroll", revealElements);
-revealElements();
-
-
+// =========================
 // LOADER
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.getElementById("loader").style.display = "none";
-  }, 1500);
+// =========================
+
+window.addEventListener("load",()=>{
+
+  const loader =
+  document.getElementById("loader");
+
+  setTimeout(()=>{
+
+    loader.style.opacity = "0";
+
+    setTimeout(()=>{
+      loader.style.display = "none";
+    },500);
+
+  },1000);
+
 });
 
-// DARK MODE
-const themeToggle = document.getElementById("themeToggle");
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("light-mode");
-});
+// =========================
+// REVEAL SCROLL
+// =========================
 
-// FAQ
-const faqItems = document.querySelectorAll(".faq-item");
-faqItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    item.classList.toggle("active");
-  });
-});
+function revealSections(){
 
-// AOS
-AOS.init({
-  duration:1200
-});
+  const reveals =
+  document.querySelectorAll(".reveal");
 
-// GSAP
-gsap.from(".hero-content", {
-  y:100,
-  opacity:0,
-  duration:1.5
-});
+  reveals.forEach(section=>{
 
-// COUNTER
-const counters = document.querySelectorAll(".stat-box h3"); 
-counters.forEach(counter => {
-  const updateCounter = () => {
-    const target =
-    +counter.innerText.replace('+','');
-    let count = +counter.innerText;
-    const increment = target / 100;
-    if(count < target){
-      counter.innerText =
-      `${Math.ceil(count + increment)}+`;
-      setTimeout(updateCounter,20);
+    const windowHeight =
+    window.innerHeight;
+
+    const revealTop =
+    section.getBoundingClientRect().top;
+
+    if(revealTop < windowHeight - 100){
+      section.classList.add("active");
     }
-  }
 
-  counter.innerText = "0";
-  updateCounter();
-  
+  });
+
+}
+
+window.addEventListener(
+  "scroll",
+  revealSections
+);
+
+revealSections();
+
+// =========================
+// FAQ
+// =========================
+
+const faqItems =
+document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item=>{
+
+  item.addEventListener("click",()=>{
+
+    item.classList.toggle("active");
+
+  });
+
+});
+
+// =========================
+// DARK MODE
+// =========================
+
+const themeToggle =
+document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click",()=>{
+
+  document.body.classList.toggle(
+    "light-mode"
+  );
+
+});
+
+// =========================
+// CAROUSEL
+// =========================
+
+document.addEventListener(
+  "DOMContentLoaded",
+  ()=>{
+
+    const slides =
+    document.querySelectorAll(
+      ".carousel-slide"
+    );
+
+    const indicators =
+    document.querySelectorAll(
+      ".indicator"
+    );
+
+    const nextBtn =
+    document.querySelector(".next");
+
+    const prevBtn =
+    document.querySelector(".prev");
+
+    let currentSlide = 0;
+
+    function showSlide(index){
+
+      slides.forEach(slide=>{
+        slide.classList.remove("active");
+      });
+
+      indicators.forEach(indicator=>{
+        indicator.classList.remove("active");
+      });
+
+      slides[index].classList.add("active");
+
+      indicators[index].classList.add("active");
+
+    }
+
+    function nextSlide(){
+
+      currentSlide++;
+
+      if(currentSlide >= slides.length){
+        currentSlide = 0;
+      }
+
+      showSlide(currentSlide);
+
+    }
+
+    function prevSlide(){
+
+      currentSlide--;
+
+      if(currentSlide < 0){
+        currentSlide =
+        slides.length - 1;
+      }
+
+      showSlide(currentSlide);
+
+    }
+
+    // BUTTONS
+
+    if(nextBtn){
+
+      nextBtn.addEventListener(
+        "click",
+        nextSlide
+      );
+
+    }
+
+    if(prevBtn){
+
+      prevBtn.addEventListener(
+        "click",
+        prevSlide
+      );
+
+    }
+
+    // INDICATORS
+
+    indicators.forEach(
+      (indicator,index)=>{
+
+      indicator.addEventListener(
+        "click",
+        ()=>{
+
+          currentSlide = index;
+
+          showSlide(currentSlide);
+
+        });
+
+    });
+
+    // AUTO SLIDE
+
+    setInterval(()=>{
+      nextSlide();
+    },5000);
+
 });
