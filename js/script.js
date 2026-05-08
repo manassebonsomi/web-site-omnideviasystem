@@ -203,3 +203,125 @@ document.addEventListener(
     },5000);
 
 });
+
+// =========================
+// PARTICLES BACKGROUND
+// =========================
+
+tsParticles.load("particles-bg", {
+
+  fullScreen:{
+    enable:false
+  },
+
+  background:{
+    color:"transparent"
+  },
+
+  fpsLimit:60,
+
+  particles:{
+
+    number:{
+      value:70,
+      density:{
+        enable:true,
+        area:800
+      }
+    },
+
+    color:{
+      value:"#60a5fa"
+    },
+
+    shape:{
+      type:"circle"
+    },
+
+    opacity:{
+      value:0.3
+    },
+
+    size:{
+      value:{min:1,max:4}
+    },
+
+    links:{
+      enable:true,
+      distance:150,
+      color:"#2563eb",
+      opacity:0.2,
+      width:1
+    },
+
+    move:{
+      enable:true,
+      speed:1,
+      direction:"none",
+      random:false,
+      straight:false,
+      outModes:{
+        default:"bounce"
+      }
+    }
+
+  },
+
+  interactivity:{
+
+    events:{
+
+      onHover:{
+        enable:true,
+        mode:"grab"
+      },
+
+      onClick:{
+        enable:true,
+        mode:"push"
+      },
+
+      resize:true
+
+    },
+
+    modes:{
+
+      grab:{
+        distance:180,
+
+        links:{
+          opacity:0.5
+        }
+      },
+
+      push:{
+        quantity:4
+      }
+
+    }
+
+  },
+
+  detectRetina:true
+
+});
+
+// =========================
+// MOUSE GLOW EFFECT
+// =========================
+
+const glow =
+document.querySelector(".mouse-glow");
+
+document.addEventListener(
+  "mousemove",
+  (e)=>{
+
+    glow.style.left =
+    e.clientX + "px";
+
+    glow.style.top =
+    e.clientY + "px";
+
+});
