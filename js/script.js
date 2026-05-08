@@ -81,14 +81,94 @@ faqItems.forEach(item=>{
 // DARK MODE
 // =========================
 
+// =========================
+// ULTRA THEME SYSTEM
+// =========================
+
 const themeToggle =
 document.getElementById("themeToggle");
 
-themeToggle.addEventListener("click",()=>{
+const themeIcon =
+themeToggle.querySelector("i");
 
-  document.body.classList.toggle(
-    "light-mode"
+/* =========================
+   APPLY THEME
+========================= */
+
+function applyTheme(theme){
+
+  if(theme === "light"){
+
+    document.body.classList.add(
+      "light-mode"
+    );
+
+    themeIcon.className =
+    "fa-solid fa-sun";
+
+  }
+
+  else{
+
+    document.body.classList.remove(
+      "light-mode"
+    );
+
+    themeIcon.className =
+    "fa-solid fa-moon";
+
+  }
+
+}
+
+/* =========================
+   SYSTEM DETECTION
+========================= */
+
+const savedTheme =
+localStorage.getItem("theme");
+
+if(savedTheme){
+
+  applyTheme(savedTheme);
+
+}
+
+else{
+
+  const prefersLight =
+  window.matchMedia(
+    "(prefers-color-scheme: light)"
+  ).matches;
+
+  applyTheme(
+    prefersLight ? "light" : "dark"
   );
+
+}
+
+/* =========================
+   TOGGLE
+========================= */
+
+themeToggle.addEventListener(
+  "click",
+  ()=>{
+
+    const isLight =
+    document.body.classList.contains(
+      "light-mode"
+    );
+
+    const newTheme =
+    isLight ? "dark" : "light";
+
+    applyTheme(newTheme);
+
+    localStorage.setItem(
+      "theme",
+      newTheme
+    );
 
 });
 
@@ -365,5 +445,117 @@ document.addEventListener(
       );
 
     }
+
+});
+
+/* =========================
+   ANIMATED COUNTERS
+========================= */
+
+const counters = document.querySelectorAll(".counter");
+
+const startCounters = () => {
+
+  counters.forEach(counter => {
+
+    const target = +counter.getAttribute("data-target");
+
+    let count = 0;
+
+    const speed = target / 120;
+
+    const updateCounter = () => {
+
+      count += speed;
+
+      if(count < target){
+
+        counter.innerText = Math.ceil(count);
+
+        requestAnimationFrame(updateCounter);
+
+      }else{
+
+        // AJOUT DU +
+        if(target === 95){
+
+          counter.innerText = target + "%";
+
+        }else{
+
+          counter.innerText = target + "+";
+        }
+
+      }
+
+    };
+
+    updateCounter();
+
+  });
+
+};
+
+/* =========================
+   START WHEN SECTION VISIBLE
+========================= */
+
+const statsSection = document.querySelector(".stats");
+
+let started = false;
+
+window.addEventListener("scroll", () => {
+
+  const sectionTop = statsSection.offsetTop - 400;
+
+  if(window.scrollY > sectionTop && !started){
+
+    startCounters();
+
+    started = true;
+  }
+
+});
+
+/* =========================
+   VIDEO MODAL
+========================= */
+
+const videoModal = document.getElementById("videoModal");
+const openVideo = document.getElementById("openVideo");
+const closeVideo = document.getElementById("closeVideo");
+const companyVideo = document.getElementById("companyVideo");
+
+/* OPEN */
+
+openVideo.addEventListener("click", () => {
+
+  videoModal.classList.add("active");
+
+  companyVideo.play();
+
+});
+
+/* CLOSE */
+
+closeVideo.addEventListener("click", () => {
+
+  videoModal.classList.remove("active");
+
+  companyVideo.pause();
+
+});
+
+/* CLOSE OUTSIDE */
+
+videoModal.addEventListener("click", (e) => {
+
+  if(e.target === videoModal){
+
+    videoModal.classList.remove("active");
+
+    companyVideo.pause();
+
+  }
 
 });

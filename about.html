@@ -4,15 +4,18 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>À propos - Omni Dev System</title>
+  <title>A Propos - Omni Dev System</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 
 <body>
+<div id="particles-bg"></div>
+<div class="mouse-glow"></div>
 <!-- LOADER -->
 <div id="loader">
   <div class="loader-content">
@@ -30,25 +33,271 @@
   </div>
 
   <nav id="nav">
-    <a href="index.html">Accueil</a>
-    <a href="services.html">Services</a>
-    <a href="formations.html">Formations</a>
-    <a href="about.html">À propos</a>
-    <a href="contact.html">Contact</a>
+
+    <a href="index.html">
+      Accueil
+    </a>
+
+    <!-- MEGA MENU -->
+    <div class="mega-menu-container">
+
+      <a href="#" class="mega-link">
+        Services
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+
+      <div class="mega-menu">
+
+        <!-- COLONNE 1 -->
+        <div class="mega-column">
+
+          <h3>
+            Développement
+          </h3>
+
+          <a href="#">
+            <i class="fa-solid fa-globe"></i>
+            Développement Web
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-mobile-screen"></i>
+            Développement Mobile
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-desktop"></i>
+            Applications Desktop
+          </a>
+
+        </div>
+
+        <!-- COLONNE 2 -->
+        <div class="mega-column">
+
+          <h3>
+            Intelligence Artificielle
+          </h3>
+
+          <a href="#">
+            <i class="fa-solid fa-brain"></i>
+            Machine Learning
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-robot"></i>
+            Chatbots IA
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-eye"></i>
+            Vision par ordinateur
+          </a>
+
+        </div>
+
+        <!-- COLONNE 3 -->
+        <div class="mega-column">
+
+          <h3>
+            Infrastructure
+          </h3>
+
+          <a href="#">
+            <i class="fa-solid fa-cloud"></i>
+            Cloud & Hébergement
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-database"></i>
+            Base de données
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-shield-halved"></i>
+            Cybersécurité
+          </a>
+
+        </div>
+
+        <!-- BLOC PREMIUM -->
+        <div class="mega-highlight">
+
+          <span>
+            NOUVEAU
+          </span>
+
+          <h2>
+            Solutions IA Premium
+          </h2>
+
+          <p>
+            Automatisez votre entreprise
+            avec des solutions intelligentes
+            et modernes.
+          </p>
+
+          <a href="#" class="btn">
+            Explorer
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <a href="formations.html">
+      Formations
+    </a>
+
+    <a href="about.html">
+      À propos
+    </a>
+
+    <a href="contact.html">
+      Contact
+    </a>
+
+    <!-- DARK MODE -->
     <button id="themeToggle">
       <i class="fa-solid fa-moon"></i>
     </button>
+
   </nav>
 </header>
 
-<h1>À propos de nous</h1>
-<p>Omni Dev System est une entreprise tech innovante</p>
 
 
 
 
-<footer>
-  <p>© 2026 Omni Dev System | Tous droits réservés</p>
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- ENTREPRISE -->
+    <div class="footer-column">
+      <h2 class="footer-logo">
+        OMNI DEV SYSTEM
+      </h2>
+      <p class="footer-text">
+        Nous développons des solutions digitales innovantes
+        en développement web, mobile, intelligence artificielle
+        et administration des systèmes.
+      </p>
+      <div class="footer-socials">
+
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="#">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="footer-column">
+      <h3>Navigation</h3>
+
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-column">
+      <h3>Nos Services</h3>
+
+      <ul>
+        <li><a href="#">Développement Web</a></li>
+        <li><a href="#">Développement Mobile</a></li>
+        <li><a href="#">Intelligence Artificielle</a></li>
+        <li><a href="#">Base de Données</a></li>
+        <li><a href="#">Formations IT</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-column">
+      <h3>Contact</h3>
+
+      <div class="footer-contact">
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          +243 823 503 210
+        </p>
+
+         <p>
+          <i class="fa-solid fa-phone"></i>
+          +243 823 492 005
+        </p>
+
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          contact@omnidevsystem.com
+        </p>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Kinshasa, RDC
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="footer-newsletter">
+
+    <h3>
+      Recevez nos actualités
+    </h3>
+
+    <form class="newsletter-form">
+
+      <input
+        type="email"
+        placeholder="Votre adresse email"
+      >
+
+      <button type="submit">
+        S’abonner
+      </button>
+
+    </form>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 OMNI DEV SYSTEM —
+      Tous droits réservés.
+    </p>
+
+  </div>
+
 </footer>
 
 <script src="js/script.js"></script>
@@ -56,7 +305,7 @@
 <script>
   AOS.init();
 </script>
-<a href="https://wa.me/243825568355" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/243823492005" class="whatsapp-float" target="_blank">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 </body>
