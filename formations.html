@@ -1,11 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Formations</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formations - Omni Dev System</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
+
 <body>
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-content">
+    <div class="spinner"></div>
+    <h2>OMNI DEV SYSTEM</h2>
+  </div>
+</div>
+
+<header class="navbar">
+  <div class="logo">
+    OMNI DEV SYSTEM
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <nav id="nav">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="formations.html">Formations</a>
+    <a href="about.html">À propos</a>
+    <a href="contact.html">Contact</a>
+    <button id="themeToggle">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </nav>
+</header>
+
 <h1>Nos Formations</h1>
 <p>Apprenez avec nous</p>
+
+
+
+
+<footer>
+  <p>© 2026 Omni Dev System | Tous droits réservés</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<a href="https://wa.me/243825568355" class="whatsapp-float" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 </body>
 </html>
