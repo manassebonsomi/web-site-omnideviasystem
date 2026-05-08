@@ -6,28 +6,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Omni Dev System</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
 
-<header>
-  <div class="logo">OMNI DEV SYSTEM</div>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<body>
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-content">
+    <div class="spinner"></div>
+    <h2>OMNI DEV SYSTEM</h2>
+  </div>
+</div>
+
+<header class="navbar">
+  <div class="logo">
+    OMNI DEV SYSTEM
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
   <nav id="nav">
     <a href="index.html">Accueil</a>
     <a href="services.html">Services</a>
     <a href="formations.html">Formations</a>
     <a href="about.html">À propos</a>
     <a href="contact.html">Contact</a>
+    <button id="themeToggle">
+      <i class="fa-solid fa-moon"></i>
+    </button>
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <h1>Innover aujourd’hui, Transformer demain</h1>
-  <p>Nous concevons des solutions digitales intelligentes pour propulser votre business.</p>
-  <div class="hero-buttons">
-    <a href="services.html" class="btn">Découvrir nos services</a>
-    <a href="contact.html" class="btn-outline">Nous contacter</a>
+  <video autoplay muted loop playsinline class="hero-video">
+    <source
+      src="https://cdn.coverr.co/videos/coverr-programming-on-a-laptop-1567847952327?download=1080p"
+      type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+  <div class="hero-content" data-aos="fade-up">
+    <h1>
+      Innover aujourd’hui,<br>
+      Transformer demain
+    </h1>
+    <p>
+      Nous développons des solutions digitales
+      intelligentes pour le futur.
+    </p>
+    <div class="hero-buttons">
+      <a href="services.html" class="btn">
+        Découvrir nos services
+      </a>
+      <a href="contact.html" class="btn-outline">
+        Nous contacter
+      </a>
+    </div>
   </div>
 </section>
 
@@ -164,10 +200,61 @@
   <a href="contact.html" class="btn">Envoyer un message</a>
 </section>
 
+<!-- PARTENAIRES -->
+<section class="partners">
+  <h2 data-aos="fade-up">
+    Nos Partenaires
+  </h2>
+  <div class="partners-grid">
+    <div class="partner-card">
+      Microsoft
+    </div>
+    <div class="partner-card">
+      Google
+    </div>
+    <div class="partner-card">
+      OpenAI
+    </div>
+    <div class="partner-card">
+      GitHub
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <h2 data-aos="fade-up">
+    Questions Fréquentes
+  </h2>
+  <div class="faq-item">
+    <div class="faq-question">
+      Quels services proposez-vous ?
+    </div>
+    <div class="faq-answer">
+      Développement web, mobile, IA et bases de données.
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">
+      Proposez-vous des formations ?
+    </div>
+    <div class="faq-answer">
+      Oui, des formations professionnelles modernes.
+    </div>
+  </div>
+</section>
+
 <footer>
   <p>© 2026 Omni Dev System | Tous droits réservés</p>
 </footer>
 
 <script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<a href="https://wa.me/243825568355" class="whatsapp-float" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 </body>
 </html>
