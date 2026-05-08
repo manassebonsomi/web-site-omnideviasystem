@@ -121,7 +121,7 @@ nav a:hover {
 
 /* SECTIONS */
 section {
-  padding: 80px 40px;
+  padding: 50px 20px;
   position: relative
 }
 
@@ -435,7 +435,7 @@ footer {
   }
 
   section {
-    padding: 80px 20px;
+    padding: 30px 20px;
   }
 
     .grid {
