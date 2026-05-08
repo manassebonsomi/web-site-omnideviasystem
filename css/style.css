@@ -916,7 +916,7 @@ section p {
   z-index:1000;
 }
 
-.technologies{
+/* .technologies{
   text-align:center;
 }
 
@@ -955,6 +955,168 @@ section p {
 .tech i{
   font-size:3rem;
   color:#60a5fa;
+} */
+
+/* =========================
+   TECH CAROUSEL
+========================= */
+
+.technologies{
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  padding:100px 0;
+}
+
+.tech-carousel{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+  margin-top:50px;
+}
+
+/* Fade coté gauche/droite */
+
+.tech-carousel::before,
+.tech-carousel::after{
+  content:'';
+  position:absolute;
+  top:0;
+  width:180px;
+  height:100%;
+  z-index:2;
+  pointer-events:none;
+}
+
+.tech-carousel::before{
+  left:0;
+  background:linear-gradient(
+    to right,
+    #050816,
+    transparent
+  );
+}
+
+.tech-carousel::after{
+  right:0;
+  background:linear-gradient(
+    to left,
+    #050816,
+    transparent
+  );
+}
+
+/* TRACK */
+
+.tech-track{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  width:max-content;
+
+  animation:
+  scrollTech 30s linear infinite;
+}
+
+/* Pause hover */
+
+.tech-carousel:hover .tech-track{
+  animation-play-state:paused;
+}
+
+/* CARD */
+
+.tech{
+  min-width:180px;
+  height:180px;
+
+  border-radius:28px;
+
+  background:
+  rgba(255,255,255,.06);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:
+  blur(20px);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  gap:18px;
+
+  transition:.4s;
+
+  position:relative;
+  overflow:hidden;
+}
+
+/* Glow */
+
+.tech::before{
+  content:'';
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(37,99,235,.18),
+    transparent,
+    rgba(96,165,250,.08)
+  );
+
+  opacity:0;
+  transition:.4s;
+}
+
+.tech:hover::before{
+  opacity:1;
+}
+
+.tech:hover{
+  transform:
+  translateY(-10px)
+  scale(1.04);
+
+  border-color:
+  rgba(96,165,250,.35);
+
+  box-shadow:
+  0 20px 50px rgba(37,99,235,.25);
+}
+
+.tech i{
+  font-size:3.2rem;
+  color:#60a5fa;
+  position:relative;
+  z-index:2;
+}
+
+.tech span{
+  position:relative;
+  z-index:2;
+
+  font-size:1rem;
+  font-weight:600;
+  color:white;
+}
+
+/* Animation */
+
+@keyframes scrollTech{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+
 }
 
 /* DARK MODE */
@@ -1544,5 +1706,14 @@ section{
   .footer-newsletter h3{
 
     font-size:1.4rem;
+  }
+
+  .tech{
+    min-width:150px;
+    height:150px;
+  }
+
+  .tech i{
+    font-size:2.5rem;
   }
 }
