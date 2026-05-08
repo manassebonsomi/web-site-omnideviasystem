@@ -1,19 +1,31 @@
 // MENU MOBILE
+
 function toggleMenu() {
-  document.getElementById('nav').classList.toggle('active');
+  document
+    .getElementById("nav")
+    .classList.toggle("active");
 }
 
-// ANIMATION AU SCROLL
-const reveals = document.querySelectorAll('.card, .stat-box, .testimonial-card');
 
-window.addEventListener('scroll', () => {
-  reveals.forEach((el) => {
+// SCROLL ANIMATION
+const reveals = document.querySelectorAll(".reveal");
+
+function revealElements() {
+  reveals.forEach((element) => {
+
     const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
+    const elementTop = element.getBoundingClientRect().top;
+    const revealPoint = 100;
 
-    if(elementTop < windowHeight - 100){
-      el.classList.add('active');
-      el.classList.add('reveal');
+    if (elementTop < windowHeight - revealPoint) {
+      element.classList.add("active");
+    } else {
+      element.classList.remove("active");
     }
   });
-});
+
+}
+
+// EXECUTION
+window.addEventListener("scroll", revealElements);
+revealElements();
