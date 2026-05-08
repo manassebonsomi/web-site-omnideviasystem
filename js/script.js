@@ -325,3 +325,45 @@ document.addEventListener(
     e.clientY + "px";
 
 });
+
+// =========================
+// MOBILE MEGA MENU
+// =========================
+
+document.addEventListener(
+  "DOMContentLoaded",
+  ()=>{
+
+    const megaMenu =
+    document.querySelector(
+      ".mega-menu-container"
+    );
+
+    const megaLink =
+    document.querySelector(
+      ".mega-link"
+    );
+
+    if(megaLink){
+
+      megaLink.addEventListener(
+        "click",
+        (e)=>{
+
+          // MOBILE ONLY
+          if(window.innerWidth <= 950){
+
+            e.preventDefault();
+
+            megaMenu.classList.toggle(
+              "active"
+            );
+
+          }
+
+        }
+      );
+
+    }
+
+});
