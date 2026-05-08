@@ -1,0 +1,247 @@
+/* =========================
+   FORMATIONS PAGE
+========================= */
+
+.formations-hero{
+  min-height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:120px 20px;
+  position:relative;
+  overflow:hidden;
+}
+
+.formations-hero-content{
+  max-width:900px;
+  position:relative;
+  z-index:2;
+}
+
+.formations-badge{
+  display:inline-block;
+  padding:12px 24px;
+  border-radius:50px;
+  background:rgba(37,99,235,.12);
+  border:1px solid rgba(96,165,250,.2);
+  color:#60a5fa;
+  margin-bottom:25px;
+  font-weight:600;
+}
+
+.formations-hero h1{
+  font-size:4.5rem;
+  line-height:1.1;
+  margin-bottom:30px;
+
+  background:linear-gradient(to right,#fff,#60a5fa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.formations-hero p{
+  max-width:750px;
+  margin:auto;
+  color:#cbd5e1;
+  font-size:1.2rem;
+  line-height:1.9;
+  margin-bottom:40px;
+}
+
+/* STATS */
+
+.formations-stats{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.stat-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:40px;
+  text-align:center;
+  backdrop-filter:blur(15px);
+  transition:.4s;
+}
+
+.stat-card:hover{
+  transform:translateY(-10px);
+}
+
+.stat-card h2{
+  font-size:3rem;
+  color:#60a5fa;
+}
+
+.stat-card p{
+  color:#cbd5e1;
+}
+
+/* FORMATIONS */
+
+.formations-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+  margin-top:60px;
+}
+
+.formation-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:28px;
+  padding:40px;
+  transition:.5s;
+  position:relative;
+  overflow:hidden;
+}
+
+.formation-card:hover{
+  transform:translateY(-12px);
+  border-color:rgba(96,165,250,.3);
+  box-shadow:0 20px 50px rgba(37,99,235,.18);
+}
+
+.featured-training{
+  background:
+  linear-gradient(
+    135deg,
+    rgba(37,99,235,.18),
+    rgba(255,255,255,.05)
+  );
+}
+
+.formation-icon{
+  width:75px;
+  height:75px;
+  border-radius:22px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#2563eb,#60a5fa);
+  margin-bottom:30px;
+  font-size:1.8rem;
+}
+
+.formation-card h3{
+  font-size:1.7rem;
+  margin-bottom:20px;
+}
+
+.formation-card p{
+  color:#cbd5e1;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+
+.formation-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-bottom:30px;
+}
+
+.formation-tags span{
+  padding:10px 18px;
+  border-radius:50px;
+  background:#ffffff10;
+  color:#60a5fa;
+  font-size:.9rem;
+}
+
+.formation-btn{
+  display:inline-flex;
+  padding:14px 26px;
+  border-radius:50px;
+  background:#2563eb;
+  color:white;
+  text-decoration:none;
+  transition:.4s;
+}
+
+.formation-btn:hover{
+  transform:translateY(-4px);
+}
+
+/* PROCESS */
+
+.process-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:60px;
+}
+
+.process-card{
+  background:#ffffff08;
+  border-radius:24px;
+  padding:35px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.process-number{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#2563eb,#60a5fa);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:auto;
+  margin-bottom:25px;
+  font-size:1.4rem;
+  font-weight:bold;
+}
+
+/* CTA */
+
+.formations-cta{
+  text-align:center;
+}
+
+.cta-box{
+  max-width:900px;
+  margin:auto;
+  padding:80px 40px;
+  border-radius:40px;
+  background:
+  linear-gradient(
+    135deg,
+    rgba(37,99,235,.2),
+    rgba(255,255,255,.05)
+  );
+
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.cta-box h2{
+  font-size:3rem;
+  margin-bottom:25px;
+}
+
+.cta-box p{
+  color:#cbd5e1;
+  margin-bottom:35px;
+  line-height:1.8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .formations-hero h1{
+    font-size:2.8rem;
+  }
+
+  .cta-box h2{
+    font-size:2rem;
+  }
+
+}
