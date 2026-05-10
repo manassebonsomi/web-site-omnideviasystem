@@ -2,9 +2,20 @@
 // MENU MOBILE
 // =========================
 
-function toggleMenu(){
-  document.getElementById("nav")
-  .classList.toggle("active");
+function toggleMenu(btn) {
+  const nav = document.getElementById("nav");
+  const icon = btn.querySelector("i");
+
+  nav.classList.toggle("active");
+
+  // BASCULE ICÔNE
+  if (nav.classList.contains("active")) {
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-xmark");
+  } else {
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
+  }
 }
 
 // =========================

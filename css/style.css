@@ -264,10 +264,20 @@ nav a:hover{
   color:#60a5fa;
 }
 
+#nav{
+  transition: 0.4s ease;
+}
+
+#nav.active{
+  display: flex; /* ou block selon ton design */
+}
+
 .menu-toggle {
   display: none;
-  font-size: 2rem;
+  font-size: 1.6rem;
   cursor: pointer;
+  color: white;
+  transition: 0.3s ease;
 }
 
 /* HERO */
@@ -3614,7 +3624,7 @@ body.light-mode .overlay{
   /* THEME BUTTON */
 
   #themeToggle{
-    width:100%;
+    width:25%;
   }
 
   /* =========================
@@ -3671,6 +3681,15 @@ body.light-mode .overlay{
 
   .menu-toggle {
     display: block;
+  }
+
+  .menu-toggle i{
+    transition: 0.3s ease;
+  }
+
+  .menu-toggle:hover{
+    transform: scale(1.1);
+    color: #00f0ff;
   }
 
   nav {
