@@ -1,0 +1,77 @@
+.service-hero{
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:120px 20px;
+}
+
+.service-hero h1{
+  font-size:3.5rem;
+  background:linear-gradient(to right,#fff,#60a5fa);
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.service-section .container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+  align-items:center;
+}
+
+.service-section ul{
+  margin-top:20px;
+  list-style:none;
+}
+
+.service-section ul li{
+  margin:10px 0;
+  color:#cbd5e1;
+}
+
+.service-section ul i{
+  color:#60a5fa;
+  margin-right:10px;
+}
+
+.tech-stack .grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.tech-stack .card{
+  padding:20px;
+  background:#ffffff08;
+  border-radius:15px;
+}
+
+.process .steps{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:center;
+  padding:40px;
+}
+
+.process .step{
+  padding:15px 20px;
+  background:#2563eb;
+  border-radius:12px;
+  color:white;
+}
+
+.cta-service{
+  text-align:center;
+  padding:100px 20px;
+}
