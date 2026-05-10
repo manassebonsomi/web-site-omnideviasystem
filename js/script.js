@@ -11,7 +11,7 @@ function toggleMenu(){
 // LOADER
 // =========================
 
-window.addEventListener("load",()=>{
+/* window.addEventListener("load",()=>{
 
   const loader =
   document.getElementById("loader");
@@ -25,6 +25,49 @@ window.addEventListener("load",()=>{
     },500);
 
   },1000);
+
+}); */
+
+/* =========================================
+   PREMIUM PRELOADER
+========================================= */
+
+const dynamicText = document.getElementById("dynamic-text");
+
+const loadingTexts = [
+  "Initialisation...",
+  "Chargement des modules...",
+  "Connexion sécurisée...",
+  "Préparation de l’interface...",
+  "Bienvenue chez OMNI DEV SYSTEM"
+];
+
+let textIndex = 0;
+
+const textInterval = setInterval(() => {
+
+  textIndex++;
+
+  if(textIndex < loadingTexts.length){
+
+    dynamicText.textContent =
+      loadingTexts[textIndex];
+
+  }
+
+}, 700);
+
+/* HIDE LOADER */
+
+window.addEventListener("load", () => {
+
+  setTimeout(() => {
+
+    document.body.classList.add("loaded");
+
+    clearInterval(textInterval);
+
+  }, 4000);
 
 });
 

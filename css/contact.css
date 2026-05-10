@@ -2,6 +2,17 @@
    CONTACT PAGE
 ========================= */
 
+/* *{
+  max-width: 100%;
+  box-sizing: border-box;
+} */
+
+html,
+body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .contact-hero{
   min-height:70vh;
   display:flex;

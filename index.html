@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omni Dev System</title>
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"> -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+  <title>Omni Dev IA System</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,17 +18,82 @@
 <body>
 <div id="particles-bg"></div>
 <div class="mouse-glow"></div>
-<!-- LOADER -->
+<!-- PREMIUM PRELOADER -->
 <div id="loader">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="loader-glow glow-1"></div>
+  <div class="loader-glow glow-2"></div>
+
   <div class="loader-content">
-    <div class="spinner"></div>
-    <h2>OMNI DEV SYSTEM</h2>
+
+    <!-- LOGO -->
+    <div class="loader-logo">
+
+      <!-- IMAGE LOGO -->
+      <img
+        src="images/logo.png"
+        alt="Omni Dev IA System Logo"
+      >
+
+      <!-- CIRCLE -->
+      <div class="logo-ring"></div>
+
+    </div>
+
+    <!-- TITLE -->
+    <h1 class="loader-title">
+      OMNI DEV IA SYSTEM
+    </h1>
+
+    <!-- DYNAMIC TEXT -->
+    <p class="loader-text">
+      <span id="dynamic-text">
+        Initialisation...
+      </span>
+    </p>
+
+    <!-- LOADING BAR -->
+    <div class="loader-bar">
+
+      <div class="loader-progress"></div>
+
+    </div>
+
   </div>
+
 </div>
 
 <header class="navbar">
   <div class="logo">
-    OMNI DEV SYSTEM
+
+    <!-- LOGO IMAGE -->
+    <div class="navbar-logo-wrapper">
+
+      <img
+        src="images/logo.png"
+        alt="OMNI DEV IA SYSTEM"
+        class="navbar-logo"
+      >
+
+      <!-- RING -->
+      <div class="navbar-logo-ring"></div>
+
+    </div>
+
+    <!-- TEXT -->
+    <div class="logo-text">
+
+      <span class="logo-title">
+        OMNI DEV
+      </span>
+
+      <span class="logo-subtitle">
+        IA SYSTEM
+      </span>
+
+    </div>
+
   </div>
   <div class="menu-toggle" onclick="toggleMenu()">
     <i class="fa-solid fa-bars"></i>
@@ -839,7 +906,7 @@
 <!-- CONTACT RAPIDE -->
 <section class="contact-quick">
   <h2>Contactez-nous</h2>
-  <p>+243 823 503 210 |  +243 825 568 355  </p>
+  <p>+243 823 503 210 |  +243 823 491 005  </p>
   <a href="contact.html" class="btn">Envoyer un message</a>
 </section>
 
@@ -1300,6 +1367,142 @@
 
 </section>
 
+<!-- CLIENTS & PARTENAIRES -->
+<section class="clients-section">
+
+  <div class="section-title" data-aos="fade-up">
+
+    <span>Ils nous font confiance</span>
+
+    <h2>
+      Entreprises, startups et organisations
+      qui collaborent avec OMNI DEV SYSTEM
+    </h2>
+
+    <p>
+      Nous accompagnons des structures modernes
+      dans leur transformation digitale
+      avec des solutions innovantes.
+    </p>
+
+  </div>
+
+  <!-- LOGOS -->
+  <div class="clients-logos">
+
+    <div class="client-logo" data-aos="zoom-in">
+      <img src="images/clients/microsoft.png" alt="Microsoft">
+    </div>
+
+    <div class="client-logo" data-aos="zoom-in" data-aos-delay="100">
+      <img src="images/clients/google.png" alt="Google">
+    </div>
+
+    <div class="client-logo" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/clients/openai.png" alt="OpenAI">
+    </div>
+
+    <div class="client-logo" data-aos="zoom-in" data-aos-delay="300">
+      <img src="images/clients/github.png" alt="GitHub">
+    </div>
+
+    <div class="client-logo" data-aos="zoom-in" data-aos-delay="400">
+      <img src="images/clients/aws.png" alt="AWS">
+    </div>
+
+  </div>
+
+  <!-- STATS -->
+  <div class="client-stats">
+
+    <div class="client-stat" data-aos="fade-up">
+      <h3>+50</h3>
+      <p>Projets réalisés</p>
+    </div>
+
+    <div class="client-stat" data-aos="fade-up" data-aos-delay="100">
+      <h3>+20</h3>
+      <p>Entreprises accompagnées</p>
+    </div>
+
+    <div class="client-stat" data-aos="fade-up" data-aos-delay="200">
+      <h3>98%</h3>
+      <p>Satisfaction clients</p>
+    </div>
+
+    <div class="client-stat" data-aos="fade-up" data-aos-delay="300">
+      <h3>+100</h3>
+      <p>Étudiants formés</p>
+    </div>
+
+  </div>
+
+  <!-- PROJETS -->
+  <div class="client-projects">
+
+    <!-- CARD -->
+    <div class="client-project-card" data-aos="fade-up">
+
+      <div class="project-icon">
+        <i class="fa-solid fa-building"></i>
+      </div>
+
+      <h3>
+        Plateforme de Gestion
+      </h3>
+
+      <p>
+        Développement d’un système web
+        moderne pour la gestion d’entreprise.
+      </p>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="client-project-card"
+         data-aos="fade-up"
+         data-aos-delay="100">
+
+      <div class="project-icon">
+        <i class="fa-solid fa-brain"></i>
+      </div>
+
+      <h3>
+        Système IA Intelligent
+      </h3>
+
+      <p>
+        Automatisation basée sur
+        l’intelligence artificielle
+        et la vision par ordinateur.
+      </p>
+
+    </div>
+
+    <!-- CARD -->
+    <div class="client-project-card"
+         data-aos="fade-up"
+         data-aos-delay="200">
+
+      <div class="project-icon">
+        <i class="fa-solid fa-mobile-screen"></i>
+      </div>
+
+      <h3>
+        Application Mobile
+      </h3>
+
+      <p>
+        Conception d’applications Android
+        et iOS performantes et modernes.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
 <footer class="footer">
   <div class="footer-container">
     <!-- ENTREPRISE -->
@@ -1371,7 +1574,7 @@
 
          <p>
           <i class="fa-solid fa-phone"></i>
-          +243 823 492 005
+          +243 823 491 005
         </p>
 
         <p>
@@ -1428,7 +1631,7 @@
 <script>
   AOS.init();
 </script>
-<a href="https://wa.me/243823492005" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/243823491005" class="whatsapp-float" target="_blank">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 </body>

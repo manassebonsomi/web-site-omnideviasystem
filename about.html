@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Propos - Omni Dev System</title>
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"> -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+  <title>A Propos - Omni Dev IA System</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,17 +19,82 @@
 <body>
 <div id="particles-bg"></div>
 <div class="mouse-glow"></div>
-<!-- LOADER -->
+<!-- PREMIUM PRELOADER -->
 <div id="loader">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="loader-glow glow-1"></div>
+  <div class="loader-glow glow-2"></div>
+
   <div class="loader-content">
-    <div class="spinner"></div>
-    <h2>OMNI DEV SYSTEM</h2>
+
+    <!-- LOGO -->
+    <div class="loader-logo">
+
+      <!-- IMAGE LOGO -->
+      <img
+        src="images/logo.png"
+        alt="Omni Dev IA System Logo"
+      >
+
+      <!-- CIRCLE -->
+      <div class="logo-ring"></div>
+
+    </div>
+
+    <!-- TITLE -->
+    <h1 class="loader-title">
+      OMNI DEV IA SYSTEM
+    </h1>
+
+    <!-- DYNAMIC TEXT -->
+    <p class="loader-text">
+      <span id="dynamic-text">
+        Initialisation...
+      </span>
+    </p>
+
+    <!-- LOADING BAR -->
+    <div class="loader-bar">
+
+      <div class="loader-progress"></div>
+
+    </div>
+
   </div>
+
 </div>
 
 <header class="navbar">
   <div class="logo">
-    OMNI DEV SYSTEM
+
+    <!-- LOGO IMAGE -->
+    <div class="navbar-logo-wrapper">
+
+      <img
+        src="images/logo.png"
+        alt="OMNI DEV IA SYSTEM"
+        class="navbar-logo"
+      >
+
+      <!-- RING -->
+      <div class="navbar-logo-ring"></div>
+
+    </div>
+
+    <!-- TEXT -->
+    <div class="logo-text">
+
+      <span class="logo-title">
+        OMNI DEV
+      </span>
+
+      <span class="logo-subtitle">
+        IA SYSTEM
+      </span>
+
+    </div>
+
   </div>
   <div class="menu-toggle" onclick="toggleMenu()">
     <i class="fa-solid fa-bars"></i>
@@ -167,15 +235,346 @@
   </nav>
 </header>
 
+<!-- =========================
+ABOUT HERO CINÉMATIQUE
+========================= -->
+<section class="about-hero">
 
+  <div class="about-overlay"></div>
 
+  <div class="about-content" data-aos="fade-up">
 
+    <span class="about-badge">
+      À PROPOS DE NOUS
+    </span>
 
+    <h1>
+      Nous créons des solutions digitales
+      puissantes pour transformer les entreprises.
+    </h1>
 
+    <p>
+      OMNI DEV IA SYSTEM accompagne les entreprises,
+      startups et institutions dans leur transformation
+      numérique grâce à l’intelligence artificielle,
+      le développement logiciel et les infrastructures modernes.
+    </p>
 
+    <div class="about-buttons">
 
+      <a href="contact.html" class="btn-primary">
+        Démarrer un projet
+      </a>
 
+      <a href="#vision" class="btn-secondary">
+        Découvrir notre vision
+      </a>
 
+    </div>
+
+  </div>
+
+  <!-- EFFET FLOTTANT -->
+  <div class="floating-shape shape1"></div>
+  <div class="floating-shape shape2"></div>
+
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 320">
+    <path fill="#0f172a" fill-opacity="1"
+      d="M0,96L80,128C160,160,320,224,480,224C640,224,800,160,960,154.7C1120,149,1280,203,1360,229.3L1440,256L1440,320L0,320Z">
+    </path>
+  </svg>
+</div>
+
+<!-- =========================
+SECTION HISTOIRE
+========================= -->
+<section class="about-story" id="vision">
+
+  <div class="about-grid">
+
+    <div class="about-image" data-aos="fade-right">
+
+      <img src="images/team.jpg" alt="Equipe Omni Dev System">
+
+      <div class="experience-box">
+        <h2>5+</h2>
+        <p>Années d’expérience</p>
+      </div>
+
+    </div>
+
+    <div class="about-text" data-aos="fade-left">
+
+      <span class="section-subtitle">
+        NOTRE HISTOIRE
+      </span>
+
+      <h2>
+        Une équipe passionnée
+        par l’innovation technologique
+      </h2>
+
+      <p>
+        Nous développons des solutions modernes
+        en web, mobile, cloud computing,
+        intelligence artificielle et cybersécurité.
+      </p>
+
+      <p>
+        Notre mission est d’aider les entreprises
+        africaines à accélérer leur croissance
+        grâce à des technologies fiables,
+        performantes et évolutives.
+      </p>
+
+      <div class="about-features">
+
+        <div class="feature-item">
+          <i class="fa-solid fa-check"></i>
+          Solutions évolutives
+        </div>
+
+        <div class="feature-item">
+          <i class="fa-solid fa-check"></i>
+          Sécurité avancée
+        </div>
+
+        <div class="feature-item">
+          <i class="fa-solid fa-check"></i>
+          IA & Automatisation
+        </div>
+
+        <div class="feature-item">
+          <i class="fa-solid fa-check"></i>
+          Support professionnel
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+PROCESSUS
+========================= -->
+<section class="process-section">
+
+  <div class="section-header" data-aos="fade-up">
+
+    <span class="section-subtitle">
+      NOTRE PROCESSUS
+    </span>
+
+    <h2>
+      Comment nous travaillons
+    </h2>
+
+  </div>
+
+  <div class="process-grid">
+
+    <div class="process-card" data-aos="zoom-in">
+      <div class="process-number">1</div>
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <h3>Analyse du besoin</h3>
+      <p>
+        Compréhension détaillée de votre projet
+        et de vos objectifs business.
+      </p>
+    </div>
+
+    <div class="process-card" data-aos="zoom-in">
+      <div class="process-number">2</div>
+      <i class="fa-solid fa-pen-ruler"></i>
+      <h3>Conception UI/UX</h3>
+      <p>
+        Création d’interfaces modernes,
+        fluides et intuitives.
+      </p>
+    </div>
+
+    <div class="process-card" data-aos="zoom-in">
+      <div class="process-number">3</div>
+      <i class="fa-solid fa-code"></i>
+      <h3>Développement</h3>
+      <p>
+        Développement rapide avec
+        technologies modernes.
+      </p>
+    </div>
+
+    <div class="process-card" data-aos="zoom-in">
+      <div class="process-number">4</div>
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>Tests & Sécurité</h3>
+      <p>
+        Vérification complète des performances
+        et de la sécurité.
+      </p>
+    </div>
+
+    <div class="process-card" data-aos="zoom-in">
+      <div class="process-number">5</div>
+      <i class="fa-solid fa-rocket"></i>
+      <h3>Déploiement</h3>
+      <p>
+        Mise en production optimisée
+        et scalable.
+      </p>
+    </div>
+
+    <div class="process-card" data-aos="zoom-in">
+      <div class="process-number">6</div>
+      <i class="fa-solid fa-headset"></i>
+      <h3>Maintenance</h3>
+      <p>
+        Assistance continue et améliorations
+        permanentes.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+VALEURS
+========================= -->
+<section class="values-section">
+
+  <div class="section-header" data-aos="fade-up">
+
+    <span class="section-subtitle">
+      NOS VALEURS
+    </span>
+
+    <h2>
+      Ce qui nous différencie
+    </h2>
+
+  </div>
+
+  <div class="values-grid">
+
+    <div class="value-card" data-aos="fade-up">
+      <i class="fa-solid fa-lightbulb"></i>
+      <h3>Innovation</h3>
+      <p>
+        Nous utilisons les dernières technologies
+        pour créer des solutions performantes.
+      </p>
+    </div>
+
+    <div class="value-card" data-aos="fade-up">
+      <i class="fa-solid fa-users"></i>
+      <h3>Collaboration</h3>
+      <p>
+        Nous travaillons avec nos clients
+        comme de véritables partenaires.
+      </p>
+    </div>
+
+    <div class="value-card" data-aos="fade-up">
+      <i class="fa-solid fa-bolt"></i>
+      <h3>Performance</h3>
+      <p>
+        Nos systèmes sont rapides,
+        fiables et sécurisés.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+TEAM
+========================= -->
+<section class="team-section">
+
+  <div class="section-header" data-aos="fade-up">
+
+    <span class="section-subtitle">
+      NOTRE ÉQUIPE
+    </span>
+
+    <h2>
+      Experts passionnés
+    </h2>
+
+  </div>
+
+  <div class="team-grid">
+
+    <div class="team-card" data-aos="flip-left">
+
+      <img src="images/team1.jpg" alt="">
+
+      <div class="team-info">
+        <h3>Manassé Bonsomi</h3>
+        <span>CEO & Software Engineer</span>
+      </div>
+
+    </div>
+
+    <div class="team-card" data-aos="flip-left">
+
+      <img src="images/team2.jpg" alt="">
+
+      <div class="team-info">
+        <h3>Expert IA</h3>
+        <span>Artificial Intelligence</span>
+      </div>
+
+    </div>
+
+    <div class="team-card" data-aos="flip-left">
+
+      <img src="images/team3.jpg" alt="">
+
+      <div class="team-info">
+        <h3>UI/UX Designer</h3>
+        <span>Creative Designer</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+CTA FINAL
+========================= -->
+<section class="about-cta">
+
+  <div class="cta-overlay"></div>
+
+  <div class="cta-content" data-aos="zoom-in">
+
+    <h2>
+      Construisons ensemble
+      votre futur digital
+    </h2>
+
+    <p>
+      Discutons de votre projet dès aujourd’hui.
+    </p>
+
+    <a href="contact.html" class="btn-primary">
+      Contactez-nous
+    </a>
+
+  </div>
+
+</section>
 
 <footer class="footer">
   <div class="footer-container">
@@ -248,7 +647,7 @@
 
          <p>
           <i class="fa-solid fa-phone"></i>
-          +243 823 492 005
+          +243 823 491 005
         </p>
 
         <p>
@@ -305,7 +704,7 @@
 <script>
   AOS.init();
 </script>
-<a href="https://wa.me/243823492005" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/243823491005" class="whatsapp-float" target="_blank">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 </body>
